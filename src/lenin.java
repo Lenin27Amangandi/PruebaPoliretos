@@ -21,15 +21,15 @@ public class lenin {
 
     public void ShowCaracteres6For(int numCaracteres) {
         for (int i = 0; i < numCaracteres; i++) {
-            char caracter = (char) (i + 'a');
-            System.out.print(caracter + " ");
+            char vocal = (char) (i + 'a');
+            System.out.print(vocal + " ");
         }
     }
 
     public void ShowCaracteres6dosFor(int numCaracteres) {
         for (int i = 0; i < (numCaracteres / 2); i++) {
-            char caracter = (char) ('a' + (i * 2));
-            System.out.print(caracter + " ");
+            char vocal = (char) ('a' + (i * 2));
+            System.out.print(vocal + " ");
             System.out.print((i % 2 == 0)?"+ ":"- ");
             // if (i % 2 == 0) {
             //     System.out.print("+ ");
@@ -41,8 +41,8 @@ public class lenin {
 
     public void showCaracter7(int numCaracteres) {
         for (int i = 1; i <= numCaracteres; i++) {
-            char caracter=(char) ('a' + (i-1));
-            String mLetra = Character.toString(caracter);
+            char vocal=(char) ('a' + (i-1));
+            String mLetra = Character.toString(vocal);
             // System.out.print(2*i+" ");
             System.out.print(mLetra.repeat(i*2)+" ");
         }
@@ -101,5 +101,101 @@ public class lenin {
         System.out.println("Salida: tiene "+contador+" vocales");
     }
 
+    public void cadenaCaracter2(String nombre){
+        int contador=0;
+        String nombreMinuscula=nombre.toLowerCase();
+        for (int i = 0; i < nombre.length(); i++) {
+            if ((nombreMinuscula.charAt(i)=='a')||(nombreMinuscula.charAt(i)=='e')
+            ||(nombreMinuscula.charAt(i)=='i')||(nombreMinuscula.charAt(i)=='o')||(nombreMinuscula.charAt(i)=='u')) {
+                contador=contador+1;
+            }
+        }
+        System.out.println("Frase= "+nombre);
+        System.out.println("Salida: tiene "+(nombre.length()-contador)+" letras");
+    }
 
-}
+    public void showCadenaCaracteres1(String frase) {
+        int vocales = 0;
+        char[] arregloVocales = {'a','e','i','o','u'};
+		for (int i = 0; i < frase.length(); i++) {     
+            for (int j = 0; j < arregloVocales.length; j++) {
+                if (frase.charAt(i) == arregloVocales[j]) {
+                    vocales++;  
+                }
+            }
+		}
+	    System.out.println("Hay: " + vocales + " vocales");
+        System.out.println(" ");
+    }
+
+    public void cadenaCaracter3(String nombre,String vocal){
+        String nombreMinuscula=nombre.toLowerCase();
+        String palabraSinVocal=nombreMinuscula.replaceAll(vocal, " ");
+        System.out.println("Palabra inicial: "+nombre);
+        System.out.println("vocal: "+vocal);
+        System.out.println("salida: "+palabraSinVocal);
+    }
+
+    public void cadenaCaracter4(String frase,String letra ){
+        String nombreMinuscula=frase.toLowerCase();
+        String palabraSinVocal=nombreMinuscula.replaceAll(letra, " ");
+        System.out.println("Palabra inicial: "+frase);
+        System.out.println("vocal: "+letra);
+        System.out.println("salida: "+palabraSinVocal);
+    }
+
+
+        public void showCadenaCaracteres5(String palabraOriginal) {
+            StringBuilder palabraInvertida = new StringBuilder();
+            for (int i = palabraOriginal.length() - 1; i >= 0; i--) {
+                char c = palabraOriginal.charAt(i);
+                if ((c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u')) {
+                    palabraInvertida.append(Character.toUpperCase(c));
+                } else {
+                    palabraInvertida.append(c);
+                }
+            }
+            System.out.println("Palabra invertida: " + palabraInvertida);
+        }
+
+
+        public void showFrase5For (String frase){
+            char [] fraseCaracteres;
+            fraseCaracteres = frase.toCharArray();
+            System.out.println();
+            for (int i = fraseCaracteres.length - 1; i >= 0; i--) {
+                if (fraseCaracteres[i] == 'a' || fraseCaracteres[i] == 'e' || fraseCaracteres[i] == 'i' || fraseCaracteres[i] == 'o' || fraseCaracteres[i] == 'u'){
+                    fraseCaracteres[i] = Character.toUpperCase(fraseCaracteres[i]);
+                    System.out.print(fraseCaracteres[i]);
+                }
+                else
+                    System.out.print(fraseCaracteres[i]);
+            }
+        }
+
+        public void cadenaCaracter5(String frase){
+            char fraseNueva []=frase.toCharArray();
+            for (int i = fraseNueva.length-1; 0<=i; i--) {
+                if (fraseNueva[i]=='a'||fraseNueva[i]=='e'||fraseNueva[i]=='i'||fraseNueva[i]=='o'||fraseNueva[i]=='u') {
+                    fraseNueva[i]=Character.toUpperCase(fraseNueva[i]);
+                    System.out.print(fraseNueva[i]);
+                } else {
+                    System.out.print(fraseNueva[i]);
+                }
+                
+            }
+        }
+
+        public void cadenaCaracter6(String frase){
+            char fraseNueva []=frase.toCharArray();
+            for (int i =fraseNueva.length-1 ; 0<=i; i--) {
+                if ((fraseNueva[i]!='a')||(fraseNueva[i]!='e')||(fraseNueva[i]!='i')||(fraseNueva[i]!='o')||(fraseNueva[i]!='u')) {
+                    fraseNueva[i]=Character.toUpperCase(fraseNueva[i]);
+                    System.out.print(fraseNueva[i]);
+                } else {
+                    System.out.print(fraseNueva[i]);
+                }
+            }
+        }
+
+    }

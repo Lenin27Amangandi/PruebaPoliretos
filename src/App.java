@@ -31,6 +31,12 @@ public class App {
             // ln.serNum7(9);
             // ln.serie4(8);
             // ln.cadenaCaracter1("MurcielagoRapido");
+            // ln.cadenaCaracter2("JinxNeverGiveUp");
+            // ln.cadenaCaracter3("Amangandi", "a");
+            // ln.cadenaCaracter4("GlassinSkyTheLine", "s");
+            // ln.cadenaCaracter5("Aristotedrose");
+            // ln.showCadenaCaracteres5("Aristotedrose");
+            ln.cadenaCaracter6("DarkInTheSoul");
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
