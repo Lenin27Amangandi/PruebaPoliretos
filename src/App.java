@@ -1,8 +1,12 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         pruebasTesteos proof = new pruebasTesteos();
         matrizPrueba ma = new matrizPrueba();
         lenin ln = new lenin();
+
+        Scanner sc = new Scanner(System.in);
         // proof.ShowArray4("lenin", "amangandi");
         // proof.serie12(10);
         // proof.serie1(10);
@@ -39,10 +43,29 @@ public class App {
             // ln.cadenaCaracter6("DarkInTheSoul");
             // ln.g1_crearFigura4(10,'*' );
             // ln.g1_crearFiguraCuatros(10,'*');
-            // ln.g1_crearFigura5(10,'*');
-            ln.g1_crearFigura12(10,'*');
-            ln.g1_crearFigura122(10);
-            ln.g1_crearFigura13(10);
+            ln.g1_crearFigura5(10, '*');
+            // ln.g1_crearFigura12(10,'*');
+            // ln.g1_crearFigura122(10);
+            // ln.g1_crearFigura13(10);
+            // ln.showFigura15For(10);
+            // ln.g1_crearFigura16(10);
+            // System.out.println("Diguite la frase1: ");
+            // String frase = sc.nextLine();
+            // ln.g1_crearCadena1(frase);
+            // ln.showLoading2('*');
+            // ln.g1_crearCadena6("ballena");
+            // ln.showCadenaCaracteres7("mañanamojamostodaslasjarjos");
+            // ln.g1_crearFigura114(8);
+            // ln.g1_crearFigura15(8);
+            // ln.g1_crearFigura16Ac(8);
+            // ln.g1_crearFigura17(8);
+            ln.g1_crearSerie5(10);
+            ln.g1_crearSerieCaracter8(10);
+
+            String[] stringArray = { "Valor1", "Valor2", "Valor3", "Valor4" };
+            int[] intArray = { 100, 50, 75, 40 };
+            ln.showArrays1(stringArray, intArray);
+            ln.showArrays11(stringArray, intArray);
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
