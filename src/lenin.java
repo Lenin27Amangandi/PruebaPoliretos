@@ -30,43 +30,42 @@ public class lenin {
         for (int fila = 0; fila < (numCaracteres / 2); fila++) {
             char vocal = (char) ('a' + (fila * 2));
             System.out.print(vocal + " ");
-            System.out.print((fila % 2 == 0)?"+ ":"- ");
+            System.out.print((fila % 2 == 0) ? "+ " : "- ");
             // if (fila % 2 == 0) {
-            //     System.out.print("+ ");
+            // System.out.print("+ ");
             // } else {
-            //     System.out.print("- ");
+            // System.out.print("- ");
             // }
         }
     }
 
     public void showCaracter7(int numCaracteres) {
         for (int fila = 1; fila <= numCaracteres; fila++) {
-            char vocal=(char) ('a' + (fila-1));
+            char vocal = (char) ('a' + (fila - 1));
             String mLetra = Character.toString(vocal);
             // System.out.print(2*fila+" ");
-            System.out.print(mLetra.repeat(fila*2)+" ");
+            System.out.print(mLetra.repeat(fila * 2) + " ");
         }
     }
 
-    public void serNum6(int nivel){
+    public void serNum6(int nivel) {
         for (int fila = 1; fila <= nivel; fila++) {
-            System.out.print(fila*fila+" ");
+            System.out.print(fila * fila + " ");
         }
     }
 
-    public void serNum7(int nivel){
-        int contador=4,contador2=1;
+    public void serNum7(int nivel) {
+        int contador = 4, contador2 = 1;
         for (int fila = 1; fila <= nivel; fila++) {
-            if (fila%2==0) {
-                System.out.print(contador+" ");
-                contador=contador+6;
+            if (fila % 2 == 0) {
+                System.out.print(contador + " ");
+                contador = contador + 6;
             } else {
-                System.out.print(contador2+" ");
-                contador2=contador2+6;
+                System.out.print(contador2 + " ");
+                contador2 = contador2 + 6;
             }
         }
     }
-
 
     public void serie4(int nivel) {
         System.out.println("Serie numerica 4");
@@ -88,141 +87,194 @@ public class lenin {
         System.out.println();
     }
 
-    public void cadenaCaracter1(String nombre){
-        int contador=0;
-        String nombreMinuscula=nombre.toLowerCase();
+    public void cadenaCaracter1(String nombre) {
+        int contador = 0;
+        String nombreMinuscula = nombre.toLowerCase();
         for (int fila = 0; fila < nombre.length(); fila++) {
-            if ((nombreMinuscula.charAt(fila)=='a')||(nombreMinuscula.charAt(fila)=='e')
-            ||(nombreMinuscula.charAt(fila)=='i')||(nombreMinuscula.charAt(fila)=='o')||(nombreMinuscula.charAt(fila)=='u')) {
-                contador=contador+1;
+            if ((nombreMinuscula.charAt(fila) == 'a') || (nombreMinuscula.charAt(fila) == 'e')
+                    || (nombreMinuscula.charAt(fila) == 'i') || (nombreMinuscula.charAt(fila) == 'o')
+                    || (nombreMinuscula.charAt(fila) == 'u')) {
+                contador = contador + 1;
             }
         }
-        System.out.println("Frase= "+nombre);
-        System.out.println("Salida: tiene "+contador+" vocales");
+        System.out.println("Frase= " + nombre);
+        System.out.println("Salida: tiene " + contador + " vocales");
     }
 
-    public void cadenaCaracter2(String nombre){
-        int contador=0;
-        String nombreMinuscula=nombre.toLowerCase();
+    public void cadenaCaracter2(String nombre) {
+        int contador = 0;
+        String nombreMinuscula = nombre.toLowerCase();
         for (int fila = 0; fila < nombre.length(); fila++) {
-            if ((nombreMinuscula.charAt(fila)=='a')||(nombreMinuscula.charAt(fila)=='e')
-            ||(nombreMinuscula.charAt(fila)=='i')||(nombreMinuscula.charAt(fila)=='o')||(nombreMinuscula.charAt(fila)=='u')) {
-                contador=contador+1;
+            if ((nombreMinuscula.charAt(fila) == 'a') || (nombreMinuscula.charAt(fila) == 'e')
+                    || (nombreMinuscula.charAt(fila) == 'i') || (nombreMinuscula.charAt(fila) == 'o')
+                    || (nombreMinuscula.charAt(fila) == 'u')) {
+                contador = contador + 1;
             }
         }
-        System.out.println("Frase= "+nombre);
-        System.out.println("Salida: tiene "+(nombre.length()-contador)+" letras");
+        System.out.println("Frase= " + nombre);
+        System.out.println("Salida: tiene " + (nombre.length() - contador) + " letras");
     }
 
     public void showCadenaCaracteres1(String frase) {
         int vocales = 0;
-        char[] arregloVocales = {'a','e','i','o','u'};
-		for (int fila = 0; fila < frase.length(); fila++) {     
+        char[] arregloVocales = { 'a', 'e', 'i', 'o', 'u' };
+        for (int fila = 0; fila < frase.length(); fila++) {
             for (int j = 0; j < arregloVocales.length; j++) {
                 if (frase.charAt(fila) == arregloVocales[j]) {
-                    vocales++;  
+                    vocales++;
                 }
             }
-		}
-	    System.out.println("Hay: " + vocales + " vocales");
+        }
+        System.out.println("Hay: " + vocales + " vocales");
         System.out.println(" ");
     }
 
-    public void cadenaCaracter3(String nombre,String vocal){
-        String nombreMinuscula=nombre.toLowerCase();
-        String palabraSinVocal=nombreMinuscula.replaceAll(vocal, " ");
-        System.out.println("Palabra inicial: "+nombre);
-        System.out.println("vocal: "+vocal);
-        System.out.println("salida: "+palabraSinVocal);
+    public void cadenaCaracter3(String nombre, String vocal) {
+        String nombreMinuscula = nombre.toLowerCase();
+        String palabraSinVocal = nombreMinuscula.replaceAll(vocal, " ");
+        System.out.println("Palabra inicial: " + nombre);
+        System.out.println("vocal: " + vocal);
+        System.out.println("salida: " + palabraSinVocal);
     }
 
-    public void cadenaCaracter4(String frase,String letra ){
-        String nombreMinuscula=frase.toLowerCase();
-        String palabraSinVocal=nombreMinuscula.replaceAll(letra, " ");
-        System.out.println("Palabra inicial: "+frase);
-        System.out.println("vocal: "+letra);
-        System.out.println("salida: "+palabraSinVocal);
+    public void cadenaCaracter4(String frase, String letra) {
+        String nombreMinuscula = frase.toLowerCase();
+        String palabraSinVocal = nombreMinuscula.replaceAll(letra, " ");
+        System.out.println("Palabra inicial: " + frase);
+        System.out.println("vocal: " + letra);
+        System.out.println("salida: " + palabraSinVocal);
     }
 
-
-        public void showCadenaCaracteres5(String palabraOriginal) {
-            StringBuilder palabraInvertida = new StringBuilder();
-            for (int fila = palabraOriginal.length() - 1; fila >= 0; fila--) {
-                char c = palabraOriginal.charAt(fila);
-                if ((c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u')) {
-                    palabraInvertida.append(Character.toUpperCase(c));
-                } else {
-                    palabraInvertida.append(c);
-                }
+    public void showCadenaCaracteres5(String palabraOriginal) {
+        StringBuilder palabraInvertida = new StringBuilder();
+        for (int fila = palabraOriginal.length() - 1; fila >= 0; fila--) {
+            char c = palabraOriginal.charAt(fila);
+            if ((c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u')) {
+                palabraInvertida.append(Character.toUpperCase(c));
+            } else {
+                palabraInvertida.append(c);
             }
-            System.out.println("Palabra invertida: " + palabraInvertida);
         }
+        System.out.println("Palabra invertida: " + palabraInvertida);
+    }
 
+    public void showFrase5For(String frase) {
+        char[] fraseCaracteres;
+        fraseCaracteres = frase.toCharArray();
+        System.out.println();
+        for (int fila = fraseCaracteres.length - 1; fila >= 0; fila--) {
+            if (fraseCaracteres[fila] == 'a' || fraseCaracteres[fila] == 'e' || fraseCaracteres[fila] == 'i'
+                    || fraseCaracteres[fila] == 'o' || fraseCaracteres[fila] == 'u') {
+                fraseCaracteres[fila] = Character.toUpperCase(fraseCaracteres[fila]);
+                System.out.print(fraseCaracteres[fila]);
+            } else
+                System.out.print(fraseCaracteres[fila]);
+        }
+    }
 
-        public void showFrase5For (String frase){
-            char [] fraseCaracteres;
-            fraseCaracteres = frase.toCharArray();
+    public void cadenaCaracter5(String frase) {
+        char fraseNueva[] = frase.toCharArray();
+        for (int fila = fraseNueva.length - 1; 0 <= fila; fila--) {
+            if (fraseNueva[fila] == 'a' || fraseNueva[fila] == 'e' || fraseNueva[fila] == 'i' || fraseNueva[fila] == 'o'
+                    || fraseNueva[fila] == 'u') {
+                fraseNueva[fila] = Character.toUpperCase(fraseNueva[fila]);
+                System.out.print(fraseNueva[fila]);
+            } else {
+                System.out.print(fraseNueva[fila]);
+            }
+
+        }
+    }
+
+    public void cadenaCaracter6(String frase) {
+        char fraseNueva[] = frase.toCharArray();
+        for (int fila = fraseNueva.length - 1; 0 <= fila; fila--) {
+            if ((fraseNueva[fila] != 'a') || (fraseNueva[fila] != 'e') || (fraseNueva[fila] != 'i')
+                    || (fraseNueva[fila] != 'o') || (fraseNueva[fila] != 'u')) {
+                fraseNueva[fila] = Character.toUpperCase(fraseNueva[fila]);
+                System.out.print(fraseNueva[fila]);
+            } else {
+                System.out.print(fraseNueva[fila]);
+            }
+        }
+    }
+
+    public void showFigura5For(int nroNiveles) {
+        System.out.println();
+        for (int filas = nroNiveles; filas > 0; filas--) {
+            for (int espacio = nroNiveles; espacio > filas; espacio--) {
+                System.out.print(" ");
+            }
+            for (int numCaracter = 0; numCaracter < filas; numCaracter++) {
+                System.out.print("* ");
+            }
             System.out.println();
-            for (int fila = fraseCaracteres.length - 1; fila >= 0; fila--) {
-                if (fraseCaracteres[fila] == 'a' || fraseCaracteres[fila] == 'e' || fraseCaracteres[fila] == 'i' || fraseCaracteres[fila] == 'o' || fraseCaracteres[fila] == 'u'){
-                    fraseCaracteres[fila] = Character.toUpperCase(fraseCaracteres[fila]);
-                    System.out.print(fraseCaracteres[fila]);
-                }
-                else
-                    System.out.print(fraseCaracteres[fila]);
-            }
         }
-
-        public void cadenaCaracter5(String frase){
-            char fraseNueva []=frase.toCharArray();
-            for (int fila = fraseNueva.length-1; 0<=fila; fila--) {
-                if (fraseNueva[fila]=='a'||fraseNueva[fila]=='e'||fraseNueva[fila]=='i'||fraseNueva[fila]=='o'||fraseNueva[fila]=='u') {
-                    fraseNueva[fila]=Character.toUpperCase(fraseNueva[fila]);
-                    System.out.print(fraseNueva[fila]);
-                } else {
-                    System.out.print(fraseNueva[fila]);
-                }
-                
-            }
-        }
-
-        public void cadenaCaracter6(String frase){
-            char fraseNueva []=frase.toCharArray();
-            for (int fila =fraseNueva.length-1 ; 0<=fila; fila--) {
-                if ((fraseNueva[fila]!='a')||(fraseNueva[fila]!='e')||(fraseNueva[fila]!='i')||(fraseNueva[fila]!='o')||(fraseNueva[fila]!='u')) {
-                    fraseNueva[fila]=Character.toUpperCase(fraseNueva[fila]);
-                    System.out.print(fraseNueva[fila]);
-                } else {
-                    System.out.print(fraseNueva[fila]);
-                }
-            }
-        }
-
-
-        public void showFigura5For(int nroNiveles){
-            System.out.println();
-            for (int filas = nroNiveles; filas > 0; filas--) {
-                for (int espacio = nroNiveles; espacio > filas; espacio--) {
-                    System.out.print(" ");
-                }
-                for (int numCaracter = 0; numCaracter < filas; numCaracter++) {
-                    System.out.print("* ");
-                }
-                System.out.println();
-            }
-        }
-
-//Sirve para otras cosas que puden se rinteresantes
-        public void g1_crearFigura4(int nivel,char caracter){
-            for (int fila = 0; fila < nivel; fila++) {
-                for (int espacios = nivel; fila <espacios; espacios--) {
-                    System.out.print(".");
-                }
-                for (int numCaracter = 0; numCaracter < fila; numCaracter++) {
-                    System.out.print(caracter+" ");
-                }
-                System.out.println();
-            }
-        }
-
     }
+
+    // Sirve para otras cosas que puden se rinteresantes
+    public void g1_crearFigura4(int nivel, char caracter) {
+        for (int fila = 0; fila < nivel; fila++) {
+            for (int espacios = nivel; fila < espacios; espacios--) {
+                System.out.print(".");
+            }
+            for (int numCaracter = 0; numCaracter < fila; numCaracter++) {
+                System.out.print(caracter + " ");
+            }
+            System.out.println();
+        }
+    }
+//Este va para la muestra
+    public void g1_crearFiguraCuatros(int nivel, char caracter) {
+        for (int fila = 0; fila < nivel; fila++) {
+            for (int espacio = 0; espacio < (nivel - fila - 1); espacio++) {
+                System.out.print(" ");
+            }
+            for (int simbolo = 0; simbolo<(fila*2)+1; simbolo++) {
+                System.out.print(caracter);
+            }
+            System.out.println();
+        }
+    }
+
+    public void g1_crearFigura5(int nivel, char caracter) {
+        for (int fila = 0; fila < nivel; fila++) {
+            for (int espacio = 0; espacio < fila; espacio++) {
+                System.out.print(" ");
+            }
+            for (int simbolo = 0; simbolo < (nivel * 2 - (fila * 2) - 1); simbolo++) {
+                System.out.print(caracter);
+            }
+            System.out.println();
+        }
+    }
+
+    public void g1_crearFigura12(int nivel, char caracter) {
+        for (int fila = 0; fila < nivel; fila++) {
+            for (int i = 0; i <= fila; i++) {
+                System.out.print(caracter+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void g1_crearFigura122(int nivel) {
+        for (int fila = 1; fila <= nivel; fila++) {  // n=4 , for1: 1,2,3
+            for (int i = 1; i <= fila; i++) {        // for2:  
+                System.out.print(i);                 // imp   1,12
+            }
+            System.out.println();
+        }
+    }
+
+
+    public void g1_crearFigura13(int nivel) {
+        for (int fila = nivel; fila >= 1; fila--) { // n5 for1 5
+            for (int i = 1; i <= fila; i++) {        // for2 1,2,3,4,56
+                System.out.print(i);                //imprime:12345
+            }
+            System.out.println();
+        }
+    }
+    
+}

@@ -37,7 +37,12 @@ public class App {
             // ln.cadenaCaracter5("Aristotedrose");
             // ln.showCadenaCaracteres5("Aristotedrose");
             // ln.cadenaCaracter6("DarkInTheSoul");
-            ln.g1_crearFigura4(10,'*' );
+            // ln.g1_crearFigura4(10,'*' );
+            // ln.g1_crearFiguraCuatros(10,'*');
+            // ln.g1_crearFigura5(10,'*');
+            ln.g1_crearFigura12(10,'*');
+            ln.g1_crearFigura122(10);
+            ln.g1_crearFigura13(10);
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
