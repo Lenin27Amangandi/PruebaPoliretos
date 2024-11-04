@@ -36,7 +36,8 @@ public class App {
             // ln.cadenaCaracter4("GlassinSkyTheLine", "s");
             // ln.cadenaCaracter5("Aristotedrose");
             // ln.showCadenaCaracteres5("Aristotedrose");
-            ln.cadenaCaracter6("DarkInTheSoul");
+            // ln.cadenaCaracter6("DarkInTheSoul");
+            ln.g1_crearFigura4(10,'*' );
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
