@@ -67,17 +67,20 @@ public class App {
             // ln.showArrays1(stringArray, intArray);
             // ln.showArrays11(stringArray, intArray);
 
-            // repaso.loading1();
-            // repaso.showLoading1();
-            // repaso.loading4();
             // repaso.loading2();
-            // repaso.loading2222();
             // repaso.loadingPrueba();
             // repaso.showLoading7();
-            // repaso.NombreAnimacion("LiamAckermanReiss");
             // repaso.SimulacionMovimiento();
-            repaso.BarraCarga('*');
-            repaso.SimulacionMovimiento2('=');
+            // repaso.SimulacionMovimiento('+');
+            // repaso.BarraCarga2();
+            repaso.loading1();
+            repaso.loading2('*');
+            repaso.loading3('=');
+            repaso.loading4();
+            repaso.loading5();
+            repaso.loading5Dinamico();
+            repaso.loading8("LiamAckermanReiss");
+            repaso.loading10("ArchivoAprobarLosPoliretos.pdf");
 
         } catch (Exception e) {
             System.out.println("No se pudo");
