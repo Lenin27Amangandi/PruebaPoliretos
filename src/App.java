@@ -6,6 +6,8 @@ public class App {
         matrizPrueba ma = new matrizPrueba();
         lenin ln = new lenin();
 
+        loadingsRepaso repaso = new loadingsRepaso();
+
         Scanner sc = new Scanner(System.in);
         // proof.ShowArray4("lenin", "amangandi");
         // proof.serie12(10);
@@ -17,9 +19,7 @@ public class App {
             // proof.imprimirEscalera(10);
             // proof.imprimirFiguraAdaptada(10);
             // proof.imprimirEscaleraInvertida(10);
-
             // proof.desplazarFigura();
-
             // ma.ShowArray5For("Lenin,Liam");
             // proof.Array5();
             // proof.serie3(10);
@@ -43,7 +43,7 @@ public class App {
             // ln.cadenaCaracter6("DarkInTheSoul");
             // ln.g1_crearFigura4(10,'*' );
             // ln.g1_crearFiguraCuatros(10,'*');
-            ln.g1_crearFigura5(10, '*');
+            // ln.g1_crearFigura5(10, '*');
             // ln.g1_crearFigura12(10,'*');
             // ln.g1_crearFigura122(10);
             // ln.g1_crearFigura13(10);
@@ -59,13 +59,26 @@ public class App {
             // ln.g1_crearFigura15(8);
             // ln.g1_crearFigura16Ac(8);
             // ln.g1_crearFigura17(8);
-            ln.g1_crearSerie5(10);
-            ln.g1_crearSerieCaracter8(10);
+            // ln.g1_crearSerie5(10);
+            // ln.g1_crearSerieCaracter8(10);
 
-            String[] stringArray = { "Valor1", "Valor2", "Valor3", "Valor4" };
-            int[] intArray = { 100, 50, 75, 40 };
-            ln.showArrays1(stringArray, intArray);
-            ln.showArrays11(stringArray, intArray);
+            // String[] stringArray = { "Valor1", "Valor2", "Valor3", "Valor4" };
+            // int[] intArray = { 100, 50, 75, 40 };
+            // ln.showArrays1(stringArray, intArray);
+            // ln.showArrays11(stringArray, intArray);
+
+            // repaso.loading1();
+            // repaso.showLoading1();
+            // repaso.loading4();
+            // repaso.loading2();
+            // repaso.loading2222();
+            // repaso.loadingPrueba();
+            // repaso.showLoading7();
+            // repaso.NombreAnimacion("LiamAckermanReiss");
+            // repaso.SimulacionMovimiento();
+            repaso.BarraCarga('*');
+            repaso.SimulacionMovimiento2('=');
+
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
