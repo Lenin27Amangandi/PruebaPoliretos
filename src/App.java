@@ -73,14 +73,24 @@ public class App {
             // repaso.SimulacionMovimiento();
             // repaso.SimulacionMovimiento('+');
             // repaso.BarraCarga2();
-            repaso.loading1();
-            repaso.loading2('*');
-            repaso.loading3('=');
-            repaso.loading4();
-            repaso.loading5();
-            repaso.loading5Dinamico();
-            repaso.loading8("LiamAckermanReiss");
-            repaso.loading10("ArchivoAprobarLosPoliretos.pdf");
+            // repaso.loading1();
+            // repaso.loading2('*');
+            // repaso.loading3('=');
+            // repaso.loading4();
+            // repaso.loading5();
+            // repaso.loading5Dinamico();
+            // repaso.loading8("LiamAckermanReiss");
+            // repaso.loading10("ArchivoAprobarLosPoliretos.pdf");
+            ultimoRepaso last=new ultimoRepaso();
+            // last.moverFigura();
+            // last.moverFigura2();
+            // last.moverFiguraHorizontal();
+            // last.moverFiguraConMarco();
+            last.mostrarNombreConProgreso();
+            last.mostrarNombreConProgreso2();
+            last.mostrarNombreConProgreso3();
+            last.mostrarNombreConProgreso4();
+
 
         } catch (Exception e) {
             System.out.println("No se pudo");
