@@ -1,6 +1,7 @@
 public class pruebasTesteos {
 
     public void ShowArray4(String nombre, String apellido) {
+        // int tamañoMatriz = Math.max(nombre.length(), apellido.length());
         int tamañoMatriz = Math.max(nombre.length(), apellido.length()) + 1;
         char[][] matriz = new char[tamañoMatriz][tamañoMatriz];
         for (int fila = 0; fila < tamañoMatriz; fila++) {
@@ -19,6 +20,7 @@ public class pruebasTesteos {
                 System.out.print(matriz[fila][columna] + " ");
             }
             System.out.println();
+
         }
     }
 
@@ -55,30 +57,29 @@ public class pruebasTesteos {
     public void serie2(Integer nivel) {
         System.out.println("Serie numerica 2");
         for (int i = 1; i <= nivel; i++)
-        System.out.print((i % 2 == 0) ? "0" + " " : i + " ");
+            System.out.print((i % 2 == 0) ? "0" + " " : i + " ");
         System.out.println();
     }
-    
-    public void serie3(int nivel ){
+
+    public void serie3(int nivel) {
         System.out.println("Serie numerica 3");
-        int num1 = 0, num2 = 1,impar=1, num3;
+        int num1 = 0, num2 = 1, impar = 1, num3;
         for (int i = 1; i <= nivel; i++) {
             if (i == 1) {
-                System.out.print(num1 + "/"+impar+" ");
+                System.out.print(num1 + "/" + impar + " ");
             } else if (i == 2) {
-                System.out.print(num2 + "/"+(impar+2)+" ");
-                impar=impar+2;
+                System.out.print(num2 + "/" + (impar + 2) + " ");
+                impar = impar + 2;
             } else {
-                impar=impar+2;
+                impar = impar + 2;
                 num3 = num1 + num2;
-                System.out.print(num3 + "/"+impar+" ");
+                System.out.print(num3 + "/" + impar + " ");
                 num1 = num2;
                 num2 = num3;
             }
         }
         System.out.println();
     }
-
 
     public void imprimirEscalera(Integer nivel) {
         for (int i = 1; i <= nivel; i++) {
@@ -104,9 +105,26 @@ public class pruebasTesteos {
         }
     }
 
+    public void imprimirFigura10(int nroNiveles) {
+        for (int i = 1; i <= nroNiveles; i++) {
+            int espacios = i - 1;
+            System.out.print("  ".repeat(espacios));
+            if (i % 2 != 0) {
+                if (i % 4 == 1) {
+                    System.out.print("_+_");
+                } else {
+                    System.out.print("_-_");
+                }
+            } else {
+                System.out.print(" |");
+            }
+            System.out.println();
+        }
+    }
+
     public void imprimirEscaleraInvertida(int nroNiveles) {
-        for (int i = nroNiveles,j=1; i >= 1 && j<=nroNiveles; i--,j++) {
-            int espacios = i-1;
+        for (int i = nroNiveles, j = 1; i >= 1 && j <= nroNiveles; i--, j++) {
+            int espacios = i - 1;
             System.out.print("  ".repeat(espacios));
             if (j % 2 != 0) {
                 System.out.print("-".repeat(3));
@@ -116,8 +134,8 @@ public class pruebasTesteos {
             System.out.println();
         }
     }
-    
-    //desde aqui va el loading 
+
+    // desde aqui va el loading
 
     public void desplazarFigura() {
         // Número de espacios para desplazar la figura
@@ -128,7 +146,7 @@ public class pruebasTesteos {
                 "ooO-(_)-Ooo"
         };
 
-        int longitudPantalla = 30;  // Ajusta según la longitud de la pantalla o espacio disponible
+        int longitudPantalla = 30; // Ajusta según la longitud de la pantalla o espacio disponible
 
         // Moverse de izquierda a derecha
         while (desplazamiento <= longitudPantalla) {
@@ -207,18 +225,18 @@ public class pruebasTesteos {
         }
     }
 
-
-    public void Array5(){
+    public void Array5() {
         System.out.println("A continuación se muestra una matriz cuadrada del tamaño de mi nombre: ");
-        char [] nombresCompletos = {'M','a','t','e','o','N','i','c','o','l','a','s','S','i','m','b','a','n','a','G','u','a','r','n','i','z','o'};
+        char[] nombresCompletos = { 'M', 'a', 't', 'e', 'o', 'N', 'i', 'c', 'o', 'l', 'a', 's', 'S', 'i', 'm', 'b', 'a',
+                'n', 'a', 'G', 'u', 'a', 'r', 'n', 'i', 'z', 'o' };
         int tamaño = 5;
-        
-        Character [][] matriz = new Character[tamaño][tamaño];
-        for(int caracter = 0; caracter < nombresCompletos.length; caracter++){
+
+        Character[][] matriz = new Character[tamaño][tamaño];
+        for (int caracter = 0; caracter < nombresCompletos.length; caracter++) {
             int fila, columna;
-            fila = (int)(Math.random()*5);
-            columna = (int)(Math.random()*5);
-            matriz[fila][columna] = (matriz[fila][columna] !=null) ? '*' : nombresCompletos[caracter];
+            fila = (int) (Math.random() * 5);
+            columna = (int) (Math.random() * 5);
+            matriz[fila][columna] = (matriz[fila][columna] != null) ? '*' : nombresCompletos[caracter];
         }
 
         for (Character[] fila : matriz) {
@@ -232,7 +250,5 @@ public class pruebasTesteos {
             System.out.println();
         }
     }
-    
-    
 
 }

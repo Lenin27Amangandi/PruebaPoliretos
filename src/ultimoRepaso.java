@@ -156,27 +156,20 @@ public class ultimoRepaso {
     }
 
     public void mostrarNombreConProgreso() {
-
         String nombreCompleto = "Kenin Alaxis"; // Leer nombre completo
-
         // Obtener la longitud del nombre para calcular el porcentaje
         int longitudNombre = nombreCompleto.length();
-
         // Mostrar cada letra con su porcentaje de avance
         for (int i = 0; i < longitudNombre; i++) {
             // Calcular el porcentaje
             int porcentaje = (i + 1) * 100 / longitudNombre;
-
             // Construir la parte del nombre que se muestra hasta la letra actual
             String nombreParcial = nombreCompleto.substring(0, i + 1);
-
             // Mostrar la letra y el porcentaje en la misma línea
             System.out.print("\r" + nombreParcial + " " + porcentaje + "%");
-
             // Esperar un poco para hacer la animación más visible
             esperar(150); // Retraso de 150 ms
         }
-
         // Mostrar un salto de línea final después de completar el progreso
         System.out.println();
     }
@@ -205,60 +198,131 @@ public class ultimoRepaso {
 
     public void mostrarNombreConProgreso3() {
         String nombreCompleto = "Levi Ackerman"; // Leer nombre completo
-
         // Obtener la longitud del nombre para calcular el porcentaje
         int longitudNombre = nombreCompleto.length();
-
         // Mostrar cada letra con su porcentaje de avance
         for (int i = 0; i < longitudNombre; i++) {
             // Calcular el porcentaje
             int porcentaje = (i + 1) * 100 / longitudNombre;
-
             // Obtener la letra actual
             char letra = nombreCompleto.charAt(i);
-
             // Espacios antes de la letra para que avance de izquierda a derecha
             String espacios = " ".repeat(i);
-
             // Mostrar la letra con su porcentaje alineado
             System.out.println(espacios + letra + " " + porcentaje + "%");
-
             // Esperar un poco para hacer la animación más visible
             esperar(150); // Retraso de 150 ms
         }
     }
 
     public void mostrarNombreConProgreso4() {
-        String nombreCompleto = "Levi Ackerman"; // Leer nombre completo
-
-        // Obtener la longitud del nombre para calcular el porcentaje
+        String nombreCompleto = "LeninAlexander";
         int longitudNombre = nombreCompleto.length();
-
-        // Determinar el espacio máximo para alinear los porcentajes
-        int maxLongitud = longitudNombre * 2; // Asumimos que el espacio máximo es dos veces la longitud del nombre
-
-        // Mostrar cada letra con su porcentaje de avance
         for (int i = 0; i < longitudNombre; i++) {
-            // Calcular el porcentaje
             int porcentaje = (i + 1) * 100 / longitudNombre;
-
-            // Obtener la letra actual
             char letra = nombreCompleto.charAt(i);
-
-            // Espacios antes de la letra para que avance de izquierda a derecha
             String espacios = " ".repeat(i);
-
-            // Crear la cadena de porcentaje con el formato correcto
             String porcentajeStr = porcentaje + "%";
-
-            // Asegurar que el porcentaje esté alineado al final
-            String espaciosParaPorcentaje = " ".repeat(maxLongitud - (espacios.length() + 1 + porcentajeStr.length()));
-
-            // Imprimir la letra con el porcentaje alineado al final
-            System.out.println(espacios + letra + espaciosParaPorcentaje + porcentajeStr);
-
-            // Esperar un poco para hacer la animación más visible
-            esperar(150); // Retraso de 150 ms
+            String espaciosParaPorcentaje = " ".repeat(longitudNombre - i);
+            System.out.println("[" + espacios + letra + espaciosParaPorcentaje + "] " + porcentajeStr);
+            esperar(150);
         }
     }
+
+    public void cadenaCaracter6(String frase) {
+        String fraseInvertida = "";
+        char actual;
+        for (int i = frase.length() - 1; 0 <= i; i--) {
+            if (frase.charAt(i) == 'a' || frase.charAt(i) == 'e' || frase.charAt(i) == 'o' || frase.charAt(i) == 'i'
+                    || frase.charAt(i) == 'u') {
+                actual = frase.charAt(i);
+                fraseInvertida = fraseInvertida + actual;
+            } else {
+                actual = frase.toUpperCase().charAt(i);
+                fraseInvertida = fraseInvertida + actual;
+            }
+        }
+        System.out.println("La palabra 6 es: " + fraseInvertida);
+    }
+
+    public void cadenaCaracter5(String frase) {
+        String fraseInvertida = "";
+        char actual;
+        for (int i = frase.length() - 1; 0 <= i; i--) {
+            if (frase.charAt(i) == 'a' || frase.charAt(i) == 'e' || frase.charAt(i) == 'o' || frase.charAt(i) == 'i'
+                    || frase.charAt(i) == 'u') {
+                actual = frase.toUpperCase().charAt(i);
+                fraseInvertida = fraseInvertida + actual;
+            } else {
+                actual = frase.charAt(i);
+                fraseInvertida = fraseInvertida + actual;
+            }
+        }
+        System.out.println("La palabra 5 es: " + fraseInvertida);
+    }
+
+    public void loading11(int nivel) {
+        int numRandom;
+        int espacio;
+        String simbolo = "-";
+        System.out.println();
+        for (int i = 0; i < nivel; i++) {
+            numRandom = (int) (Math.random() * 10);
+            espacio = 10 - numRandom;
+            System.out.println(numRandom + " ".repeat(espacio) + "\033[32m" + simbolo.repeat(numRandom) + "|"
+                    + simbolo.repeat(numRandom));
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
+    }
+
+    public void serieCaracter4(int nivel) {
+        System.out.println();
+        String simbolos[] = { "+", "-", "*", "/" };
+        for (int i = 0; i < nivel; i++) {
+            System.out.print(simbolos[i % 4] + " ");
+            // System.out.print("\r"+simbolos[i % 4]);
+            try {
+                Thread.sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void serieCaracter5(int nivel) {
+        System.out.println();
+        String simbolos[] = { "\\", "|", "/", "-" };
+        for (int i = 0; i < nivel; i++) {
+            System.out.print(simbolos[i % 4] + " ");
+            // System.out.print("\r"+simbolos[i % 4]);
+            try {
+                Thread.sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void serieCaracter8(int nivel) {
+        System.out.println();
+        int numeroInpar;
+        String letra;
+        for (int i = 0; i < nivel; i++) {
+            char simbolo = (char) ('a'+i);
+            numeroInpar = (i*2)+1;
+            letra=Character.toString(simbolo);
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.print(letra.repeat(numeroInpar)+" ");
+        }
+    }
+
 }
