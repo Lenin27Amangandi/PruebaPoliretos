@@ -1,0 +1,263 @@
+import java.util.Random;
+
+public class theLatDance {
+
+    public static void generarBarrasDeSonido(int numBarras, int alturaMax) {
+        Random random = new Random();
+        int[] alturas = new int[numBarras];
+        // Genera alturas aleatorias para cada barra
+        for (int i = 0; i < numBarras; i++) {
+            alturas[i] = random.nextInt(alturaMax + 1); // Altura entre 0 y alturaMax
+        }
+        // Construye la visualización de las barras de sonido
+        for (int nivel = alturaMax; nivel > 0; nivel--) {
+            for (int altura : alturas) {
+                // Imprime "≡ " si la altura de la barra alcanza el nivel actual, de lo
+                // contrario, imprime espacios
+                System.out.print(altura >= nivel ? "* " : "  ");
+            }
+            System.out.println(); // Salto de línea al final de cada fila
+        }
+        // Imprime la base de las barras de sonido
+        for (int i = 0; i < numBarras; i++) {
+            System.out.print("* ");
+        }
+        System.out.println(); // Salto de línea final
+    }
+
+    public void g2_array0555() {
+        System.out.print("\n- Serie A05.\n");
+        String nombreCompleto = "Lenin Amangandi Alexander LLumiguano"; // Frase de ejemplo
+        String[] palabras = nombreCompleto.split(" ");
+        String primerPalabra = palabras[0];
+        int tamanoMatriz = primerPalabra.length();
+        char[][] matriz = new char[tamanoMatriz][tamanoMatriz];
+        // Inicializar la matriz con espacios vacíos
+        for (int i = 0; i < tamanoMatriz; i++) {
+            for (int j = 0; j < tamanoMatriz; j++) {
+                matriz[i][j] = ' ';
+            }
+        }
+
+        // Rellenar la matriz con las letras de la primera palabra
+        for (int k = 0; k < palabras.length; k++) {
+            primerPalabra = palabras[k];
+            for (char letra : primerPalabra.toCharArray()) {
+                int x, y;
+                x = (int) (Math.random() * tamanoMatriz);
+                y = (int) (Math.random() * tamanoMatriz);
+                if (matriz[x][y] != ' ') {
+                    matriz[x][y] = '*';
+                } else {
+                    matriz[x][y] = letra;
+                }
+            }
+        }
+
+        // Mostrar la matriz con un pequeño retraso entre cada impresión
+        for (int i = 0; i < tamanoMatriz; i++) {
+            for (int j = 0; j < tamanoMatriz; j++) {
+                // Imprimir cada carácter con un pequeño retraso
+                System.out.print(matriz[i][j] + " ");
+                try {
+                    Thread.sleep(300); // Retraso de 100 milisegundos
+                } catch (InterruptedException e) {
+                    e.printStackTrace(); // Manejo de la excepción si ocurre
+                }
+            }
+            // Salto de línea al final de cada fila
+            System.out.println();
+        }
+        System.out.println(" ");
+    }
+
+    public static void mostrarBarraProgreso() throws InterruptedException {
+        String[] simbolos = { "\\", "|", "/", "-" };
+        int longitudBarra = 20;
+        int tiempoEspera = 200;
+        for (int i = 1; i <= longitudBarra; i++) {
+            // Símbolo rotatorio, cambia en cada iteración
+            String simboloRotativo = simbolos[i % simbolos.length];
+            // Construcción de la barra de progreso
+            String progreso = "=".repeat(i) + simboloRotativo + " ".repeat(longitudBarra - i);
+            // Cálculo del porcentaje
+            int porcentaje = (i * 100) / longitudBarra;
+            // Imprime la barra de progreso con el porcentaje
+            System.out.print("\r[" + progreso + "] " + porcentaje + "%");
+            // Espera un momento para simular el avance
+            Thread.sleep(tiempoEspera);
+        }
+        System.out.println();
+        // Al finalizar, muestra la barra completa al 100%
+        // System.out.print("\r[" + "=".repeat(longitudBarra) + "] 100%\n");
+    }
+
+    public static void mostrarBarraProgreso2222() throws InterruptedException {
+        String[] simbolos = { ">", "-" };
+        int longitudBarra = 20;
+        int tiempoEspera = 500;
+        for (int i = 1; i <= longitudBarra; i++) {
+            // Símbolo rotatorio, cambia en cada iteración
+            String simboloRotativo = simbolos[i % simbolos.length];
+            // Construcción de la barra de progreso
+            String progreso = "=".repeat(i) + simboloRotativo + " ".repeat(longitudBarra - i);
+            // Cálculo del porcentaje
+            int porcentaje = (i * 100) / longitudBarra;
+            // Imprime la barra de progreso con el porcentaje
+            System.out.print("\r[" + progreso + "] " + porcentaje + "%");
+            // Espera un momento para simular el avance
+            Thread.sleep(tiempoEspera);
+        }
+        // Al finalizar, muestra la barra completa al 100%
+        // System.out.print("\r[" + "=".repeat(longitudBarra) + "] 100%\n");
+    }
+
+    public static void mostrarBarraDesplazamiento() throws InterruptedException {
+        String simbolo = "<=>";
+        int longitudBarra = 20;
+        int tiempoEspera = 500;
+        int simboloLongitud = simbolo.length();
+
+        for (int i = 0; i <= longitudBarra - simboloLongitud; i++) {
+            // Construcción de la barra con el símbolo desplazado
+            String espacioIzquierda = " ".repeat(i);
+            String espacioDerecha = " ".repeat(longitudBarra - simboloLongitud - i);
+            String progreso = "[" + espacioIzquierda + simbolo + espacioDerecha + "]";
+
+            // Cálculo del porcentaje basado en la posición del símbolo
+            int porcentaje = (i * 100) / (longitudBarra - simboloLongitud);
+
+            // Imprime la barra de desplazamiento con el porcentaje
+            System.out.print("\r" + progreso + " " + porcentaje + "%");
+
+            // Pausa para simular el movimiento
+            Thread.sleep(tiempoEspera);
+        }
+
+        // Al finalizar, muestra la barra completa al 100%
+        // System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) +
+        // simbolo + "] 100%\n");
+        System.out.println();
+    }
+
+
+
+    public static void mostrarBarraDesplazamiento14() throws InterruptedException {
+        String simbolo = "<=>";
+        int simboloLongitud = simbolo.length();
+        int longitudBarra = 20;
+        int tiempoEspera = 500;
+        
+        boolean moverDerecha = true;  // Variable para alternar la dirección
+
+        for (int i = 0; i <= 10; i++) {  // 10 porque vamos a mover la barra en incrementos de 10%
+            // int porcentaje = i * 10;
+            int porcentaje = i;
+            // Dependiendo de si moverDerecha es verdadero o falso, ajustamos la dirección
+            if (moverDerecha) {
+                // Movimiento de izquierda a derecha
+                for (int j = 0; j <= longitudBarra - simboloLongitud; j++) {
+                    String espacioIzquierda = " ".repeat(j);
+                    String espacioDerecha = " ".repeat(longitudBarra - simboloLongitud - j);
+                    String progreso = "[" + espacioIzquierda + simbolo + espacioDerecha + "]";
+                    System.out.print("\r" + progreso + " " + porcentaje + "%");
+                    Thread.sleep(tiempoEspera);
+                }
+            } else {
+                // Movimiento de derecha a izquierda
+                for (int j = longitudBarra - simboloLongitud; j >= 0; j--) {
+                    String espacioIzquierda = " ".repeat(j);
+                    String espacioDerecha = " ".repeat(longitudBarra - simboloLongitud - j);
+                    String progreso = "[" + espacioIzquierda + simbolo + espacioDerecha + "]";
+
+                    System.out.print("\r" + progreso + " " + porcentaje + "%");
+                    Thread.sleep(tiempoEspera);
+                }
+            }
+
+            // Alterna la dirección
+            moverDerecha = !moverDerecha;
+        }
+
+        // Al finalizar, muestra la barra completa al 100%
+        System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) + simbolo + "] 100%\n");
+    }
+
+
+    public static void mostrarBarraProgreso142() throws InterruptedException {
+        int longitudBarra = 20;
+        int tiempoEspera = 100;
+        String simbolo = "<=>";
+        int simboloLongitud = simbolo.length();
+        // Bucle principal para controlar el avance de la barra
+        for (int i = 1; i <= 100; i++) {  // Se va de 1% a 100%
+            int porcentaje = i;  // Porcentaje de progreso
+
+            // Calcular el número de espacios que se deben agregar a la barra según el porcentaje
+            int espacios = (int) ((longitudBarra - simboloLongitud) * (i / 100.0));
+            String espaciosIzquierda = " ".repeat(espacios);
+            String espaciosDerecha = " ".repeat(longitudBarra - simboloLongitud - espacios);
+
+            // Formar la barra con el símbolo y los espacios calculados
+            String barra = "[" + espaciosIzquierda + simbolo + espaciosDerecha + "]";
+
+            // Mostrar la barra de progreso con el porcentaje
+            System.out.print("\r" + barra + " " + porcentaje + "%");
+            Thread.sleep(tiempoEspera);  // Esperar el tiempo de simulación
+        }
+
+        // Al finalizar, muestra la barra completa al 100%
+        System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) + simbolo + "] 100%\n");
+    }
+
+
+    public void imprimirFiguraAdaptada2(int nroNiveles) {
+        for (int i = 1; i <= nroNiveles; i++) {
+            int espacios = i - 1;
+            System.out.print("  ".repeat(espacios));
+            if (i % 2 != 0) {
+                System.out.print("_"+"+".repeat(i)+"_"); // Tres guiones
+            } else {
+                System.out.print("|");
+            }
+            System.out.println();
+        }
+    }
+
+    public void imprimirFiguraAdaptada32(int nroNiveles) {
+        for (int i = 1; i <= nroNiveles; i++) {
+            // Calcular los espacios antes de los símbolos
+            int espacios = nroNiveles - i;  // Los espacios disminuyen a medida que aumentan los niveles
+            System.out.print("  ".repeat(espacios)); // Imprime los espacios
+    
+            // Imprimir los símbolos correspondientes
+            if (i % 2 != 0) {
+                // Imprimir la línea con guion y '+' que aumentan
+                System.out.print("_" + "+".repeat(i) + "_");
+            } else {
+                // Imprimir solo el símbolo '|'
+                System.out.print("|");
+            }
+    
+            System.out.println(); // Salto de línea para el siguiente nivel
+        }
+    }
+    
+
+    public void showFigura11For(int nroNiveles) {
+        String caracteres = "|";
+        String addEspacios = "   ";  // Espacios iniciales
+        
+        for (int filas = 0; filas < nroNiveles; filas++) {
+            // Imprimir los caracteres en cada fila
+            System.out.print("  ".repeat(nroNiveles - filas - 1)); // Espacios previos a los caracteres
+            System.out.println(caracteres + " _".repeat(filas + 1)); // Imprimir caracteres con '_'
+            
+            // Aumentar los espacios para el siguiente nivel
+            addEspacios = addEspacios + "  "; // Añadir más espacios con cada nivel
+        }
+    }
+    
+    
+    
+}

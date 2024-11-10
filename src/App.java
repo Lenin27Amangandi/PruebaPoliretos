@@ -7,27 +7,42 @@ public class App {
         matrizPrueba ma = new matrizPrueba();
         lenin ln = new lenin();
         loadingsRepaso repaso = new loadingsRepaso();
-        ultimoRepaso last=new ultimoRepaso();
+        ultimoRepaso last = new ultimoRepaso();
+        theLatDance lDance=new theLatDance();
 
-        
         try {
             // proof.serie1(10);
             // proof.serie3(10);
             // proof.serie12(10);
             // ln.serNum6(7);
-            
+
             // proof.imprimirEscalera(10);
+
             // proof.imprimirFiguraAdaptada(10);
+            // proof.imprimirPiramideEscalonada(10);
+            // proof.imprimirPiramideEscalonada2(10);
+            // last.showFigura9For(10);
+            // last.generarBarrasDeSonido(12, 8);
+            // lDance.generarBarrasDeSonido(12, 8);
+            // lDance.g2_array0555();
+            // lDance.mostrarBarraProgreso();
+            // lDance.mostrarBarraProgreso2222();
+            // lDance.mostrarBarraDesplazamiento();
             // proof.imprimirEscaleraInvertida(10);
             // proof.ShowArray4("lenin", "amangandi");
             // ma.ShowArray5For("Lenin,Liam");
             // proof.Array5();
+
+            // lDance.mostrarBarraDesplazamiento14();
+            // lDance.imprimirFiguraAdaptada2(8);
+            // lDance.imprimirFiguraAdaptada32(8);
+            lDance.showFigura11For(10);
+            // lDance.mostrarBarraProgreso142();
             System.out.println();
             // ln.ShowCaracteres6For(4);
             // ln.ShowCaracteres6dosFor(8);
             // System.out.println();
             // ln.showCaracter7(5);
-
 
             // ln.serNum7(9);
             // ln.serie4(8);
@@ -92,13 +107,17 @@ public class App {
             // repaso.loading4();
             // repaso.loading5Dinamico();
             // repaso.loading8("LiamAckermanReiss");
+            String nombre[] = { "lenin", "amangandi", "llumiguano", "alexander" };
+            int porcentajes[] = { 100, 75, 50, 25 };
+            // repaso.loadingMultiple(nombre, porcentajes);
+            // repaso.loadingMultiple3(nombre, porcentajes);
+            // repaso.generarMatrizAleatoria(nombre);
+            // repaso.mostrarBarra("Liam", "Levy", "Reiss", "Ackerman", 50, 20, 60, 90);
             // repaso.loading10("ArchivoAprobarLosPoliretos.pdf");
             // last.loading11(50);
 
             // proof.desplazarFigura();
 
-            
-            
         } catch (Exception e) {
             System.out.println("No se pudo");
         }

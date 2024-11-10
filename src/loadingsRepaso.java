@@ -206,4 +206,137 @@ public class loadingsRepaso {
         System.out.println();
     }
 
+    public void loadingMultiple(String[] nombres, int[] porcentajes) {
+        if (nombres.length != 4 || porcentajes.length != 4) {
+            System.out.println("Debe ingresar exactamente 4 nombres y 4 porcentajes.");
+            return;
+        }
+
+        for (int i = 0; i < nombres.length; i++) {
+            String nombre = nombres[i];
+            int porcentaje = porcentajes[i];
+            int longitudBarra = 20; // Tamaño de la barra de progreso
+            // Calcular cuántos símbolos de progreso ">" mostrar según el porcentaje
+            int progreso = (porcentaje * longitudBarra) / 100;
+            // Mostrar la barra de progreso para el nombre actual
+            try {
+                Thread.sleep(250);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            String barraProgreso = "=".repeat(progreso) + " ".repeat(longitudBarra - progreso);
+            System.out.printf("[%s] %3d%% %s\n", barraProgreso, porcentaje, nombre);
+        }
+    }
+
+    public void loadingMultiple2(String[] nombres, int[] porcentajes) {
+        if (nombres.length != 4 || porcentajes.length != 4) {
+            System.out.println("Debe ingresar exactamente 4 nombres y 4 porcentajes.");
+            return;
+        }
+        int longitudBarra = 20; // Tamaño de la barra de progreso
+        for (int i = 0; i < nombres.length; i++) {
+            String nombre = nombres[i];
+            int porcentaje = porcentajes[i];
+            // Calcular cuántos símbolos "=" mostrar y añadir ">" al final del progreso
+            int progreso = (porcentaje * longitudBarra) / 100;
+            String barraProgreso = "=".repeat(progreso)
+                    + ">"
+                    + " ".repeat(longitudBarra - progreso - 1);
+            // Mostrar la barra de progreso para el nombre actual
+            System.out.printf("[%s] %3d%% %s\n", barraProgreso, porcentaje, nombre);
+            try {
+                Thread.sleep(250);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void loadingMultiple3(String[] nombres, int[] porcentajes) {
+        if (nombres.length != 4 || porcentajes.length != 4) {
+            System.out.println("Debe ingresar exactamente 4 nombres y 4 porcentajes.");
+            return;
+        }
+        int longitudBarra = 20; // Tamaño de la barra de progreso
+        for (int i = 0; i < nombres.length; i++) {
+            String nombre = nombres[i];
+            int porcentaje = porcentajes[i];
+            // Calcular cuántos símbolos "=" mostrar y añadir ">" al final del progreso
+            int progreso = (porcentaje * longitudBarra) / 100;
+            StringBuilder barraProgreso = new StringBuilder();
+            // Construir la parte de progreso con "="
+            for (int j = 0; j < progreso; j++) {
+                barraProgreso.append("=");
+            }
+            // Añadir el símbolo ">"
+            if (progreso < longitudBarra) {
+                barraProgreso.append(">");
+            }
+            // Completar la barra con espacios
+            for (int j = progreso + 1; j < longitudBarra; j++) {
+                barraProgreso.append(" ");
+            }
+            // Mostrar la barra de progreso para el nombre actual
+            System.out.printf("[%s] %3d%% %s\n", barraProgreso.toString(), porcentaje, nombre);
+        }
+    }
+
+    public void generarMatrizAleatoria(String[] nombres) throws InterruptedException {
+        int filas = nombres[0].length(); // Tamaño de la matriz según el primer nombre
+        char[][] matriz = new char[filas][filas];
+        Random random = new Random();
+
+        // Llenamos inicialmente la matriz con espacios
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < filas; j++) {
+                matriz[i][j] = ' ';
+            }
+        }
+
+        // Colocar letras aleatorias de cada nombre en la matriz
+        for (String nombre : nombres) {
+            for (char letra : nombre.toCharArray()) {
+                int x, y;
+                do {
+                    x = random.nextInt(filas);
+                    y = random.nextInt(filas);
+                } while (matriz[x][y] != ' '); // Buscar posición vacía
+
+                matriz[x][y] = letra;
+                mostrarMatriz(matriz); // Visualizar el proceso
+                Thread.sleep(500); // Delay de 500ms
+            }
+        }
+    }
+
+    // Método para mostrar la matriz
+    private void mostrarMatriz(char[][] matriz) {
+        for (char[] fila : matriz) {
+            for (char elemento : fila) {
+                System.out.print(elemento + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public void mostrarBarra(String nombre1, String nombre2, String nombre3, String nombre4, int num1, int num2,
+            int num3, int num4) {
+        int longitudBarra = 20; // Tamaño de la barra de progreso
+        // Llamada a la función auxiliar para cada nombre y porcentaje
+        generarBarra(nombre1, num1, longitudBarra);
+        generarBarra(nombre2, num2, longitudBarra);
+        generarBarra(nombre3, num3, longitudBarra);
+        generarBarra(nombre4, num4, longitudBarra);
+    }
+
+    private void generarBarra(String nombre, int porcentaje, int longitudBarra) {
+        int progreso = (porcentaje * longitudBarra) / 100; // Calcular progreso en función del porcentaje
+        String barraProgreso = "=".repeat(progreso) + " ".repeat(longitudBarra - progreso);
+
+        // Mostrar la barra de progreso para el nombre y porcentaje
+        System.out.printf("[%s] %3d%% %s\n", barraProgreso, porcentaje, nombre);
+    }
+
 }

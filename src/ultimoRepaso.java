@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ultimoRepaso {
@@ -323,6 +324,55 @@ public class ultimoRepaso {
             }
             System.out.print(letra.repeat(numeroInpar)+" ");
         }
+    }
+
+    public void showFigura9For(int nroNiveles){
+        // int especial = nroNiveles;
+        for (int espacio1 = 0; espacio1 < nroNiveles; espacio1++)
+        System.out.print("    ");
+        System.out.print("___");
+        System.out.println();
+        for (int filas = 0; filas < nroNiveles; filas++){
+            // especial--;
+            for (int espacio2 = 1; espacio2 < nroNiveles - filas; espacio2++)
+                System.out.print("    ");
+            System.out.print("___|");
+            for (int espacio3 = nroNiveles + 1; espacio3 > nroNiveles - filas; espacio3--)
+                System.out.print("   ");
+            for (int espacio4 = nroNiveles; espacio4 > nroNiveles - filas; espacio4--)
+                System.out.print("     ");
+            System.out.print("|___");
+            System.out.println();
+        }
+    }
+
+
+    public static void generarBarrasDeSonido(int numBarras, int alturaMax) {
+        Random random = new Random();
+        int[] alturas = new int[numBarras];
+        // Genera alturas aleatorias para cada barra
+        for (int i = 0; i < numBarras; i++) {
+            alturas[i] = random.nextInt(alturaMax + 1); // Altura entre 0 y alturaMax
+        }
+        // Construye la visualización de las barras de sonido
+        for (int altura = alturaMax; altura > 0; altura--) {
+            StringBuilder fila = new StringBuilder();
+            for (int columna : alturas) {
+                if (columna >= altura) {
+                    fila.append("= ");
+                } else {
+                    fila.append("  ");
+                }
+            }
+            System.out.println(fila);
+        }
+
+        // Imprime la base de las barras de sonido
+        StringBuilder base = new StringBuilder();
+        for (int i = 0; i < numBarras; i++) {
+            base.append("= ");
+        }
+        System.out.println(base);
     }
 
 }
