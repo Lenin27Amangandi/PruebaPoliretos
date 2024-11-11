@@ -85,7 +85,7 @@ public class loadingsRepaso {
             porcentaje = (i * 100) / nombreCompleto.length();
             System.out.print("\r[" + nombreCompleto.substring(0, i) + barraEspacios + "]" + porcentaje + "%");
             try {
-                Thread.sleep(50);
+                Thread.sleep(350);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

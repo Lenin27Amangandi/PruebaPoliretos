@@ -8,6 +8,7 @@ public class theLatDance {
         // Genera alturas aleatorias para cada barra
         for (int i = 0; i < numBarras; i++) {
             alturas[i] = random.nextInt(alturaMax + 1); // Altura entre 0 y alturaMax
+            System.out.print(alturas[i] + " ");
         }
         // Construye la visualización de las barras de sonido
         for (int nivel = alturaMax; nivel > 0; nivel--) {
@@ -16,23 +17,53 @@ public class theLatDance {
                 // contrario, imprime espacios
                 System.out.print(altura >= nivel ? "* " : "  ");
             }
-            System.out.println(); // Salto de línea al final de cada fila
+            System.out.println();
         }
-        // Imprime la base de las barras de sonido
+
         for (int i = 0; i < numBarras; i++) {
             System.out.print("* ");
         }
-        System.out.println(); // Salto de línea final
+        System.out.println();
+    }
+
+    public void loading11_() {
+        int numColumnas = 10;
+        // ObjetoRamdon para los valores aleatorios
+        Random ramdom = new Random();
+        // Una altura para cada columna
+        int alturasRandosm[] = new int[numColumnas];
+
+        for (int i = 0; i < alturasRandosm.length; i++) {
+            alturasRandosm[i] = ramdom.nextInt(8);
+            System.out.print(alturasRandosm[i] + " ");
+        }
+
+        for (int nivel = 8; 0 < nivel; nivel--) {
+            for (int altura : alturasRandosm) {
+                if (altura >= nivel) {
+                    System.out.print("= ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < alturasRandosm.length; i++) {
+            System.out.print("= ");
+        }
     }
 
     public void g2_array0555() {
         System.out.print("\n- Serie A05.\n");
+
         String nombreCompleto = "Lenin Amangandi Alexander LLumiguano"; // Frase de ejemplo
         String[] palabras = nombreCompleto.split(" ");
         String primerPalabra = palabras[0];
         int tamanoMatriz = primerPalabra.length();
         char[][] matriz = new char[tamanoMatriz][tamanoMatriz];
-        // Inicializar la matriz con espacios vacíos
+
+
         for (int i = 0; i < tamanoMatriz; i++) {
             for (int j = 0; j < tamanoMatriz; j++) {
                 matriz[i][j] = ' ';
@@ -75,21 +106,14 @@ public class theLatDance {
         String[] simbolos = { "\\", "|", "/", "-" };
         int longitudBarra = 20;
         int tiempoEspera = 200;
-        for (int i = 1; i <= longitudBarra; i++) {
-            // Símbolo rotatorio, cambia en cada iteración
+        for (int i = 0; i <= longitudBarra; i++) {
             String simboloRotativo = simbolos[i % simbolos.length];
-            // Construcción de la barra de progreso
             String progreso = "=".repeat(i) + simboloRotativo + " ".repeat(longitudBarra - i);
-            // Cálculo del porcentaje
             int porcentaje = (i * 100) / longitudBarra;
-            // Imprime la barra de progreso con el porcentaje
             System.out.print("\r[" + progreso + "] " + porcentaje + "%");
-            // Espera un momento para simular el avance
             Thread.sleep(tiempoEspera);
         }
         System.out.println();
-        // Al finalizar, muestra la barra completa al 100%
-        // System.out.print("\r[" + "=".repeat(longitudBarra) + "] 100%\n");
     }
 
     public static void mostrarBarraProgreso2222() throws InterruptedException {
@@ -105,11 +129,8 @@ public class theLatDance {
             int porcentaje = (i * 100) / longitudBarra;
             // Imprime la barra de progreso con el porcentaje
             System.out.print("\r[" + progreso + "] " + porcentaje + "%");
-            // Espera un momento para simular el avance
             Thread.sleep(tiempoEspera);
         }
-        // Al finalizar, muestra la barra completa al 100%
-        // System.out.print("\r[" + "=".repeat(longitudBarra) + "] 100%\n");
     }
 
     public static void mostrarBarraDesplazamiento() throws InterruptedException {
@@ -140,17 +161,15 @@ public class theLatDance {
         System.out.println();
     }
 
-
-
     public static void mostrarBarraDesplazamiento14() throws InterruptedException {
         String simbolo = "<=>";
         int simboloLongitud = simbolo.length();
         int longitudBarra = 20;
         int tiempoEspera = 500;
-        
-        boolean moverDerecha = true;  // Variable para alternar la dirección
 
-        for (int i = 0; i <= 10; i++) {  // 10 porque vamos a mover la barra en incrementos de 10%
+        boolean moverDerecha = true; // Variable para alternar la dirección
+
+        for (int i = 0; i <= 10; i++) { // 10 porque vamos a mover la barra en incrementos de 10%
             // int porcentaje = i * 10;
             int porcentaje = i;
             // Dependiendo de si moverDerecha es verdadero o falso, ajustamos la dirección
@@ -183,17 +202,17 @@ public class theLatDance {
         System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) + simbolo + "] 100%\n");
     }
 
-
     public static void mostrarBarraProgreso142() throws InterruptedException {
         int longitudBarra = 20;
         int tiempoEspera = 100;
         String simbolo = "<=>";
         int simboloLongitud = simbolo.length();
         // Bucle principal para controlar el avance de la barra
-        for (int i = 1; i <= 100; i++) {  // Se va de 1% a 100%
-            int porcentaje = i;  // Porcentaje de progreso
+        for (int i = 1; i <= 100; i++) { // Se va de 1% a 100%
+            int porcentaje = i; // Porcentaje de progreso
 
-            // Calcular el número de espacios que se deben agregar a la barra según el porcentaje
+            // Calcular el número de espacios que se deben agregar a la barra según el
+            // porcentaje
             int espacios = (int) ((longitudBarra - simboloLongitud) * (i / 100.0));
             String espaciosIzquierda = " ".repeat(espacios);
             String espaciosDerecha = " ".repeat(longitudBarra - simboloLongitud - espacios);
@@ -203,20 +222,19 @@ public class theLatDance {
 
             // Mostrar la barra de progreso con el porcentaje
             System.out.print("\r" + barra + " " + porcentaje + "%");
-            Thread.sleep(tiempoEspera);  // Esperar el tiempo de simulación
+            Thread.sleep(tiempoEspera); // Esperar el tiempo de simulación
         }
 
         // Al finalizar, muestra la barra completa al 100%
         System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) + simbolo + "] 100%\n");
     }
 
-
     public void imprimirFiguraAdaptada2(int nroNiveles) {
         for (int i = 1; i <= nroNiveles; i++) {
             int espacios = i - 1;
             System.out.print("  ".repeat(espacios));
             if (i % 2 != 0) {
-                System.out.print("_"+"+".repeat(i)+"_"); // Tres guiones
+                System.out.print("_" + "+".repeat(i) + "_"); // Tres guiones
             } else {
                 System.out.print("|");
             }
@@ -227,9 +245,9 @@ public class theLatDance {
     public void imprimirFiguraAdaptada32(int nroNiveles) {
         for (int i = 1; i <= nroNiveles; i++) {
             // Calcular los espacios antes de los símbolos
-            int espacios = nroNiveles - i;  // Los espacios disminuyen a medida que aumentan los niveles
+            int espacios = nroNiveles - i; // Los espacios disminuyen a medida que aumentan los niveles
             System.out.print("  ".repeat(espacios)); // Imprime los espacios
-    
+
             // Imprimir los símbolos correspondientes
             if (i % 2 != 0) {
                 // Imprimir la línea con guion y '+' que aumentan
@@ -238,26 +256,9 @@ public class theLatDance {
                 // Imprimir solo el símbolo '|'
                 System.out.print("|");
             }
-    
+
             System.out.println(); // Salto de línea para el siguiente nivel
         }
     }
-    
 
-    public void showFigura11For(int nroNiveles) {
-        String caracteres = "|";
-        String addEspacios = "   ";  // Espacios iniciales
-        
-        for (int filas = 0; filas < nroNiveles; filas++) {
-            // Imprimir los caracteres en cada fila
-            System.out.print("  ".repeat(nroNiveles - filas - 1)); // Espacios previos a los caracteres
-            System.out.println(caracteres + " _".repeat(filas + 1)); // Imprimir caracteres con '_'
-            
-            // Aumentar los espacios para el siguiente nivel
-            addEspacios = addEspacios + "  "; // Añadir más espacios con cada nivel
-        }
-    }
-    
-    
-    
 }

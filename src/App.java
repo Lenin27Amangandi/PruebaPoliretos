@@ -8,7 +8,7 @@ public class App {
         lenin ln = new lenin();
         loadingsRepaso repaso = new loadingsRepaso();
         ultimoRepaso last = new ultimoRepaso();
-        theLatDance lDance=new theLatDance();
+        theLatDance lDance = new theLatDance();
 
         try {
             // proof.serie1(10);
@@ -23,7 +23,16 @@ public class App {
             // proof.imprimirPiramideEscalonada2(10);
             // last.showFigura9For(10);
             // last.generarBarrasDeSonido(12, 8);
-            // lDance.generarBarrasDeSonido(12, 8);
+            // lDance.generarBarrasDeSonido(15, 7);
+            // lDance.loading11_();
+
+            oneOportunit one = new oneOportunit();
+            // one.array5Lenin();
+            System.out.println("La prueba correspontiente es: "+one.factorial(5));
+            // one.factorial(5);
+            System.out.println("La prueba correspontiente es: "+one.multiplicacion(10, 4));
+            System.out.println("La prueba correspontiente es: "+one.suma(10, 4));
+            // one.multiplicacion(5, 4);
             // lDance.g2_array0555();
             // lDance.mostrarBarraProgreso();
             // lDance.mostrarBarraProgreso2222();
@@ -36,7 +45,7 @@ public class App {
             // lDance.mostrarBarraDesplazamiento14();
             // lDance.imprimirFiguraAdaptada2(8);
             // lDance.imprimirFiguraAdaptada32(8);
-            lDance.showFigura11For(10);
+            // lDance.showFigura11For(10);
             // lDance.mostrarBarraProgreso142();
             System.out.println();
             // ln.ShowCaracteres6For(4);
@@ -106,7 +115,7 @@ public class App {
             // repaso.loading3('=');
             // repaso.loading4();
             // repaso.loading5Dinamico();
-            // repaso.loading8("LiamAckermanReiss");
+            // repaso.loading8("JeanSebastianAmangandiLlumiguano");
             String nombre[] = { "lenin", "amangandi", "llumiguano", "alexander" };
             int porcentajes[] = { 100, 75, 50, 25 };
             // repaso.loadingMultiple(nombre, porcentajes);
