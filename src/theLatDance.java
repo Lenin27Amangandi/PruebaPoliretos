@@ -229,36 +229,6 @@ public class theLatDance {
         System.out.print("\r[" + " ".repeat(longitudBarra - simboloLongitud) + simbolo + "] 100%\n");
     }
 
-    public void imprimirFiguraAdaptada2(int nroNiveles) {
-        for (int i = 1; i <= nroNiveles; i++) {
-            int espacios = i - 1;
-            System.out.print("  ".repeat(espacios));
-            if (i % 2 != 0) {
-                System.out.print("_" + "+".repeat(i) + "_"); // Tres guiones
-            } else {
-                System.out.print("|");
-            }
-            System.out.println();
-        }
-    }
 
-    public void imprimirFiguraAdaptada32(int nroNiveles) {
-        for (int i = 1; i <= nroNiveles; i++) {
-            // Calcular los espacios antes de los símbolos
-            int espacios = nroNiveles - i; // Los espacios disminuyen a medida que aumentan los niveles
-            System.out.print("  ".repeat(espacios)); // Imprime los espacios
-
-            // Imprimir los símbolos correspondientes
-            if (i % 2 != 0) {
-                // Imprimir la línea con guion y '+' que aumentan
-                System.out.print("_" + "+".repeat(i) + "_");
-            } else {
-                // Imprimir solo el símbolo '|'
-                System.out.print("|");
-            }
-
-            System.out.println(); // Salto de línea para el siguiente nivel
-        }
-    }
 
 }

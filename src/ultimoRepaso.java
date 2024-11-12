@@ -3,24 +3,6 @@ import java.util.Scanner;
 
 public class ultimoRepaso {
 
-    public void moverFigura() {
-        String figura = "\n\\|||/\n(> <)\nooO-(_)-Ooo";
-        int longitudPantalla = 30; // Número de columnas en la "pantalla"
-        int duracion = 100; // Duración de cada movimiento en ms
-
-        // Mover hacia la derecha
-        for (int i = 0; i < longitudPantalla; i++) {
-            System.out.print("\r" + " ".repeat(i) + figura); // Mover a la derecha
-            esperar(duracion);
-        }
-
-        // Mover hacia la izquierda
-        for (int i = longitudPantalla; i > 0; i--) {
-            System.out.print("\r" + " ".repeat(i) + figura); // Mover a la izquierda
-            esperar(duracion);
-        }
-    }
-
     private void esperar(int duracion) {
         try {
             Thread.sleep(duracion);
@@ -177,21 +159,16 @@ public class ultimoRepaso {
 
     public void mostrarNombreConProgreso2() {
         String nombreCompleto = "Levi Ackerman"; // Leer nombre completo
-
         // Obtener la longitud del nombre para calcular el porcentaje
         int longitudNombre = nombreCompleto.length();
-
         // Mostrar cada letra con su porcentaje de avance
         for (int i = 0; i < longitudNombre; i++) {
             // Calcular el porcentaje
             int porcentaje = (i + 1) * 100 / longitudNombre;
-
             // Obtener la letra actual
             char letra = nombreCompleto.charAt(i);
-
             // Mostrar la letra y el porcentaje en una nueva línea
             System.out.println(letra + " " + porcentaje + "%");
-
             // Esperar un poco para hacer la animación más visible
             esperar(150); // Retraso de 150 ms
         }
@@ -326,25 +303,6 @@ public class ultimoRepaso {
         }
     }
 
-    public void showFigura9For(int nroNiveles){
-        // int especial = nroNiveles;
-        for (int espacio1 = 0; espacio1 < nroNiveles; espacio1++)
-        System.out.print("    ");
-        System.out.print("___");
-        System.out.println();
-        for (int filas = 0; filas < nroNiveles; filas++){
-            // especial--;
-            for (int espacio2 = 1; espacio2 < nroNiveles - filas; espacio2++)
-                System.out.print("    ");
-            System.out.print("___|");
-            for (int espacio3 = nroNiveles + 1; espacio3 > nroNiveles - filas; espacio3--)
-                System.out.print("   ");
-            for (int espacio4 = nroNiveles; espacio4 > nroNiveles - filas; espacio4--)
-                System.out.print("     ");
-            System.out.print("|___");
-            System.out.println();
-        }
-    }
 
 
     public static void generarBarrasDeSonido(int numBarras, int alturaMax) {
@@ -374,5 +332,9 @@ public class ultimoRepaso {
         }
         System.out.println(base);
     }
+
+
+   
+
 
 }

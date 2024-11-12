@@ -135,46 +135,7 @@ public class pruebasTesteos {
         }
     }
 
-    public void imprimirPiramideEscalonada(int nroNiveles) {
-        for (int i = 1; i <= nroNiveles; i++) {
-            // Espacios iniciales para centrar la pirámide
-            int espacios = nroNiveles - i;
-            System.out.print("  ".repeat(espacios));
-    
-            // Escalón izquierdo
-            System.out.print("___|");
-    
-            // Espacios entre los escalones
-            int espaciosMedios = (i - 1) * 4;
-            System.out.print(" ".repeat(espaciosMedios));
-    
-            // Escalón derecho
-            System.out.print("|___");
-    
-            System.out.println(); // Salto de línea
-        }
-    }
-    
 
-    public void imprimirPiramideEscalonada2(int nroNiveles) {
-        for (int i = 1; i <= nroNiveles; i++) {
-            // Espacios iniciales para centrar la pirámide
-            int espaciosIzquierda = nroNiveles - i;
-            System.out.print("   ".repeat(espaciosIzquierda));
-    
-            // Escalón izquierdo
-            System.out.print("___|");
-    
-            // Espacios entre los escalones
-            int espaciosMedios = (i - 1) * 6; // Ajusta el multiplicador para espaciar los niveles
-            System.out.print(" ".repeat(espaciosMedios));
-    
-            // Escalón derecho
-            System.out.print("|___");
-    
-            System.out.println(); // Salto de línea
-        }
-    }
     
 
     // desde aqui va el loading
@@ -261,35 +222,8 @@ public class pruebasTesteos {
             for (int i = 0; i <= desplazamiento; i++) {
                 System.out.print("\033[H\033[1A");
             }
-
             // Decrementar el desplazamiento
             desplazamiento--;
-        }
-    }
-
-    public void Array5() {
-        System.out.println("A continuación se muestra una matriz cuadrada del tamaño de mi nombre: ");
-        char[] nombresCompletos = { 'M', 'a', 't', 'e', 'o', 'N', 'i', 'c', 'o', 'l', 'a', 's', 'S', 'i', 'm', 'b', 'a',
-                'n', 'a', 'G', 'u', 'a', 'r', 'n', 'i', 'z', 'o' };
-        int tamaño = 5;
-
-        Character[][] matriz = new Character[tamaño][tamaño];
-        for (int caracter = 0; caracter < nombresCompletos.length; caracter++) {
-            int fila, columna;
-            fila = (int) (Math.random() * 5);
-            columna = (int) (Math.random() * 5);
-            matriz[fila][columna] = (matriz[fila][columna] != null) ? '*' : nombresCompletos[caracter];
-        }
-
-        for (Character[] fila : matriz) {
-            for (Character columna : fila) {
-                System.out.print((columna == null) ? "    " : columna + "   ");
-                try {
-                    Thread.sleep(500);
-                } catch (Exception e) {
-                }
-            }
-            System.out.println();
         }
     }
 
