@@ -31,7 +31,7 @@ public class App {
         try {
 
             // grafosAtonomas.g1_crearAutomata6();
-            myGraf.g1_crearAutomata6();
+            // myGraf.g1_crearAutomata6();
             // sNum.serie1(7);
             // sNum.serie1M(7);
             // sNum.serie3(7);
@@ -59,6 +59,8 @@ public class App {
             // figL.figura13Lenin(5);
             // figL.figura16(5);
             // figL.figura17(5);
+            figL.figura9(5);
+            figL.g1_crearFigura14(6);
 
             // sCadena.cadenaCaracter1("MurcielagoRapido");
             // sCadena.cadenaCaracter2("JinxNeverGiveUp");
@@ -133,7 +135,7 @@ public class App {
             // repaso.loading5();
             // last.moverFigura();
             // last.moverFigura2();
-            last.moverFiguraHorizontal();
+            // last.moverFiguraHorizontal();
             // last.moverFiguraConMarco();
             // last.mostrarNombreConProgreso();
             // last.mostrarNombreConProgreso2();

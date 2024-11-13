@@ -87,6 +87,27 @@ public class figurasL {
         System.out.println();
     }
 
+    public void figura9(int nroNiveles) {
+        System.out.println("Figura 8");
+        String guion="___";
+        int espaciosIzq=(nroNiveles-1)*4;
+        int espaciosInter=3;
+        for (int fila = 0; fila < nroNiveles ; fila++) {
+            System.out.print(" ".repeat(espaciosIzq));
+            if (fila==0) {
+            System.out.println(guion);
+            espaciosIzq-=4;
+            } else {
+                System.out.print(guion+"|");
+                System.out.print(" ".repeat(espaciosInter));
+                System.out.println("|"+guion);
+                espaciosIzq-=4;
+                espaciosInter+=8;
+            }
+        }
+        System.out.println();
+    }
+
     public void g1_crearFigura9(int tamanio) {
         System.out.println("Figura 9:");
         int aux1 = (tamanio - 1) * 4, aux2 = 3;
