@@ -149,6 +149,22 @@ public class figurasL {
         }
     }
 
+    public void g1_crearFigura14(int nivel) {
+        System.out.println("Figura 14: ");
+        for (int filas = 0; filas < nivel; filas++) {
+            for (int espacios = nivel; filas < espacios; espacios--) {
+                System.out.print(" ");
+            }
+            int contador = 1;
+            for (int j = 0; j <= filas; j++) {
+                System.out.print(contador + " ");
+                contador = contador * (filas - j) / (j + 1);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public void figura16(int nroNiveles) {
         System.out.println("Figura N16");
         for (int i = 1; i <= nroNiveles; i++) {
