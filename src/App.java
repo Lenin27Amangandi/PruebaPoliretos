@@ -133,13 +133,12 @@ public class App {
             // repaso.loading5();
             // last.moverFigura();
             // last.moverFigura2();
-            // last.moverFiguraHorizontal();
+            last.moverFiguraHorizontal();
             // last.moverFiguraConMarco();
             // last.mostrarNombreConProgreso();
             // last.mostrarNombreConProgreso2();
             // last.mostrarNombreConProgreso3();
             // last.mostrarNombreConProgreso4();
-            // proof.imprimirFigura15(16);
 
             String nombre[] = { "lenin", "amangandi", "llumiguano", "alexander" };
             int porcentajes[] = { 15, 75, 55, 25 };

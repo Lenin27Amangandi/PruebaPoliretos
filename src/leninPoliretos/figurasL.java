@@ -112,6 +112,23 @@ public class figurasL {
         System.out.println();
     }
 
+    public void imprimirFigura10(int nroNiveles) {
+        for (int i = 1; i <= nroNiveles; i++) {
+            int espacios = i - 1;
+            System.out.print("  ".repeat(espacios));
+            if (i % 2 != 0) {
+                if (i % 4 == 1) {
+                    System.out.print("_+_");
+                } else {
+                    System.out.print("_-_");
+                }
+            } else {
+                System.out.print(" |");
+            }
+            System.out.println();
+        }
+    }
+
     public void figura12Lenin(int nivel) {
         System.out.println("Figura N12");
         for (int fila = nivel; 0 < fila; fila--) {
