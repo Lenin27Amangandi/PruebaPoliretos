@@ -43,7 +43,6 @@ public class lenin {
         for (int fila = 1; fila <= numCaracteres; fila++) {
             char vocal = (char) ('a' + (fila - 1));
             String mLetra = Character.toString(vocal);
-            // System.out.print(2*fila+" ");
             System.out.print(mLetra.repeat(fila * 2) + " ");
         }
     }
@@ -182,7 +181,6 @@ public class lenin {
             } else {
                 System.out.print(fraseNueva[fila]);
             }
-
         }
     }
 

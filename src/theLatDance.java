@@ -27,7 +27,7 @@ public class theLatDance {
     }
 
     public void loading11_() {
-        int numColumnas = 10;
+        int numColumnas = 15;
         // ObjetoRamdon para los valores aleatorios
         Random ramdom = new Random();
         // Una altura para cada columna
@@ -102,7 +102,7 @@ public class theLatDance {
         System.out.println(" ");
     }
 
-    public static void mostrarBarraProgreso() throws InterruptedException {
+    public static void mostrarBarraProgreso() {
         String[] simbolos = { "\\", "|", "/", "-" };
         int longitudBarra = 20;
         int tiempoEspera = 200;
@@ -111,7 +111,12 @@ public class theLatDance {
             String progreso = "=".repeat(i) + simboloRotativo + " ".repeat(longitudBarra - i);
             int porcentaje = (i * 100) / longitudBarra;
             System.out.print("\r[" + progreso + "] " + porcentaje + "%");
-            Thread.sleep(tiempoEspera);
+
+            try {
+                Thread.sleep(tiempoEspera);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         System.out.println();
     }
@@ -121,13 +126,9 @@ public class theLatDance {
         int longitudBarra = 20;
         int tiempoEspera = 500;
         for (int i = 1; i <= longitudBarra; i++) {
-            // Símbolo rotatorio, cambia en cada iteración
             String simboloRotativo = simbolos[i % simbolos.length];
-            // Construcción de la barra de progreso
             String progreso = "=".repeat(i) + simboloRotativo + " ".repeat(longitudBarra - i);
-            // Cálculo del porcentaje
             int porcentaje = (i * 100) / longitudBarra;
-            // Imprime la barra de progreso con el porcentaje
             System.out.print("\r[" + progreso + "] " + porcentaje + "%");
             Thread.sleep(tiempoEspera);
         }

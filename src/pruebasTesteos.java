@@ -1,7 +1,7 @@
 public class pruebasTesteos {
 
     public void ShowArray4(String nombre, String apellido) {
-        // int tamañoMatriz = Math.max(nombre.length(), apellido.length());
+        System.out.println("Array 4");
         int tamañoMatriz = Math.max(nombre.length(), apellido.length()) + 1;
         char[][] matriz = new char[tamañoMatriz][tamañoMatriz];
         for (int fila = 0; fila < tamañoMatriz; fila++) {
@@ -20,8 +20,8 @@ public class pruebasTesteos {
                 System.out.print(matriz[fila][columna] + " ");
             }
             System.out.println();
-
         }
+        System.out.println();
     }
 
     public void serie12(Integer nivel) {

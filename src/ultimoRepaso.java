@@ -208,6 +208,7 @@ public class ultimoRepaso {
     }
 
     public void cadenaCaracter6(String frase) {
+        System.out.println("Cadena 6");
         String fraseInvertida = "";
         char actual;
         for (int i = frase.length() - 1; 0 <= i; i--) {

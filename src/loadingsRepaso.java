@@ -58,13 +58,10 @@ public class loadingsRepaso {
 
     public void loading2(char caracter) {
         System.out.println("Loading 2: ");
-        int longitudTotal = 20; // Longitud total de la barra de carga
+        int longitudTotal = 20;
         for (int i = 0; i <= longitudTotal; i++) {
-            // Construimos la parte de la barra que está "cargada" con "="
             String barraCargada = String.valueOf(caracter).repeat(i);
-            // Calculamos el número de espacios que quedan para completar la longitud total
             String barraEspacios = " ".repeat(longitudTotal - i);
-            // Imprimimos la barra de carga con el progreso en porcentaje
             int porcentaje = (i * 100) / longitudTotal;
             System.out.print("\r[" + barraCargada + barraEspacios + "] " + porcentaje + "%");
             try {
@@ -146,22 +143,15 @@ public class loadingsRepaso {
         System.out.println("Figura N 5: ");
         int longitudBarra = 20;
         for (int i = 0; i <= longitudBarra; i++) {
-            // Construimos la parte de la barra que está "cargada" con "="
             String barraCargada = "=".repeat(i);
-            // Calculamos el número de espacios que quedan para completar la longitud total
             String barraEspacios = " ".repeat(longitudBarra - i);
-            // Calculamos el porcentaje
             int porcentaje = (i * 100) / longitudBarra;
-            // Definimos el carácter al final de la barra: '>' en posiciones impares, '-' en
-            // posiciones pares
             char punta;
             if (i < longitudBarra) {
                 punta = (i % 2 == 0) ? '-' : '>'; // '-' en pares, '>' en impares
             } else {
-                // Para la última posición, asignamos el carácter de la última posición
                 punta = (longitudBarra % 2 == 0) ? '-' : '>'; // Último carácter en función de la longitud
             }
-            // Imprimimos la barra de carga con el progreso en porcentaje
             System.out.print("\r[" + barraCargada + punta + barraEspacios + "] " + porcentaje + "%");
             try {
                 Thread.sleep(150);
@@ -174,7 +164,7 @@ public class loadingsRepaso {
 
     public void loading10(String nombreArchivo) {
         Random random = new Random();
-        int tamañoArchivo = random.nextInt(91) + 10; // Genera un número entre 10 y 100
+        int tamañoArchivo = random.nextInt(91) + 10;
         double tamañoActual = 0;
         int longitudBarra = 20;
         System.out.println("loading 10; ");
@@ -194,9 +184,8 @@ public class loadingsRepaso {
             // Imprimir la barra de carga en color
             System.out.print("\r" + "\033[32m" + barraCarga + "\033[0m " + String.format("%.1f", tamañoActual) + " / "
                     + tamañoArchivo + " kB");
-            // Pausa para simular el tiempo de carga
             try {
-                Thread.sleep(300); // Espera 300 ms
+                Thread.sleep(300);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -323,7 +312,7 @@ public class loadingsRepaso {
 
     public void mostrarBarra(String nombre1, String nombre2, String nombre3, String nombre4, int num1, int num2,
             int num3, int num4) {
-        int longitudBarra = 20; // Tamaño de la barra de progreso
+        int longitudBarra = 20;
         // Llamada a la función auxiliar para cada nombre y porcentaje
         generarBarra(nombre1, num1, longitudBarra);
         generarBarra(nombre2, num2, longitudBarra);
@@ -334,7 +323,6 @@ public class loadingsRepaso {
     private void generarBarra(String nombre, int porcentaje, int longitudBarra) {
         int progreso = (porcentaje * longitudBarra) / 100; // Calcular progreso en función del porcentaje
         String barraProgreso = "=".repeat(progreso) + " ".repeat(longitudBarra - progreso);
-
         // Mostrar la barra de progreso para el nombre y porcentaje
         System.out.printf("[%s] %3d%% %s\n", barraProgreso, porcentaje, nombre);
     }
