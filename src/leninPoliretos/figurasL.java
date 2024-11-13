@@ -1,6 +1,26 @@
 package leninPoliretos;
 
 public class figurasL {
+
+    public void figura2(int nroNiveles){
+        System.out.println("Figura 2");
+        for (int i = 0; i < nroNiveles; i++) {
+            for (int j = 0; j < nroNiveles; j++) {
+                if (i == 0 || i == nroNiveles - 1 || j == 0 || j == nroNiveles - 1) {
+                    if ((i + j) % 2 == 0) {
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("+ ");
+                    }
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public void figura3Lenin(int nivel) {
         System.out.println("Figura N3");
         for (int fila = 1; fila <= nivel; fila++) {
@@ -50,6 +70,21 @@ public class figurasL {
             }
             System.out.println();
         }
+    }
+
+    public void figura8(int nroNiveles) {
+        System.out.println("Figura 8");
+        for (int i = nroNiveles, j = 1; i >= 1 && j <= nroNiveles; i--, j++) {
+            int espacios = i - 1;
+            System.out.print("  ".repeat(espacios));
+            if (j % 2 != 0) {
+                System.out.print("-".repeat(3));
+            } else {
+                System.out.print(" |");
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 
     public void g1_crearFigura9(int tamanio) {

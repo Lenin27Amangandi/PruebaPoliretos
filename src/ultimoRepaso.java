@@ -94,7 +94,7 @@ public class ultimoRepaso {
     public void moverFiguraConMarco() {
         // Definir cada línea de la figura en un array para mantener el formato
         String[] figura = {
-                "       \\|||/       ",
+                "       \\|||/      ",
                 "       (> <)       ",
                 "    ooO-(_)-Ooo    "
         };
@@ -135,7 +135,7 @@ public class ultimoRepaso {
                 pausar(duracion);
             }
         }
-        System.out.println(); // Salto de línea al final
+        System.out.println();
     }
 
     public void mostrarNombreConProgreso() {

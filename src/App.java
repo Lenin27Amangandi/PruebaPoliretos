@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 import leninPoliretos.arraysL;
 import leninPoliretos.figurasL;
+import leninPoliretos.grafos;
+import leninPoliretos.myGraf;
 import leninPoliretos.recursionL;
 import leninPoliretos.sCaracterL;
 import leninPoliretos.sNumericasL;
@@ -22,73 +24,73 @@ public class App {
         sCadenasCaracter sCadena = new sCadenasCaracter();
         arraysL arrayss = new arraysL();
         recursionL recursion = new recursionL();
+        oneOportunit one = new oneOportunit();
+        grafos grafosAtonomas = new grafos();
+        myGraf myGraf = new myGraf();
 
         try {
 
-            sNum.serie1(7);
-            sNum.serie1M(7);
-            sNum.serie3(7);
-            sNum.serie4(7);
-            sNum.serie5(5);
-            sNum.serNum6(7);
-            sNum.serNum7(9);
+            // grafosAtonomas.g1_crearAutomata6();
+            myGraf.g1_crearAutomata6();
+            // sNum.serie1(7);
+            // sNum.serie1M(7);
+            // sNum.serie3(7);
+            // sNum.serie4(7);
+            // sNum.serie5(5);
+            // sNum.serNum6(7);
+            // sNum.serNum7(9);
 
-            sCar.serieCaracter4(5);
-            sCar.serieCaracter5(5);
-            sCar.sCaracter6(5);
-            sCar.sCaracter6dos(5);
-            sCar.sCaracter7(5);
-            sCar.serieCaracter8(5);
+            // sCar.serieCaracter4(5);
+            // sCar.serieCaracter5(5);
+            // sCar.sCaracter6(5);
+            // sCar.sCaracter6dos(5);
+            // sCar.sCaracter7(5);
+            // sCar.serieCaracter8(5);
 
-            figL.figura3Lenin(5);
-            figL.figura4Lenin(5);
-            figL.figura5(5, '*');
-            figL.figura6Lenin(5);
-            figL.imprimirFigura7(5);
-            figL.g1_crearFigura9(5);
-            figL.figura12Lenin(5);
-            figL.figura13Lenin(5);
-            figL.figura16(5);
-            figL.figura17(5);
+            // figL.figura2(5);
+            // figL.figura3Lenin(5);
+            // figL.figura4Lenin(5);
+            // figL.figura5(5, '*');
+            // figL.figura6Lenin(5);
+            // figL.imprimirFigura7(5);
+            // figL.figura8(5);
+            // figL.g1_crearFigura9(5);
+            // figL.figura12Lenin(5);
+            // figL.figura13Lenin(5);
+            // figL.figura16(5);
+            // figL.figura17(5);
 
-            sCadena.cadenaCaracter1("MurcielagoRapido");
-            sCadena.cadenaCaracter2("JinxNeverGiveUp");
-            sCadena.cadenaCaracter3("Aristotedrose", "o");
-            sCadena.cadenaCaracter4("GlassinSkyTheLine", "s");
-            sCadena.cadenaCaracter5("aristotedrose");
-            sCadena.cadenaCaracter6("darkintheSoul");
+            // sCadena.cadenaCaracter1("MurcielagoRapido");
+            // sCadena.cadenaCaracter2("JinxNeverGiveUp");
+            // sCadena.cadenaCaracter3("Aristotedrose", "o");
+            // sCadena.cadenaCaracter4("GlassinSkyTheLine", "s");
+            // sCadena.cadenaCaracter5("aristotedrose");
+            // sCadena.cadenaCaracter6("darkintheSoul");
 
-            arrayss.array2(7, "*");
-            arrayss.array3("Xander Half");
-            arrayss.ShowArray4("Lenin", "Amangandi");
-            arrayss.array5Lenin();
+            // arrayss.array2(7, "*");
+            // arrayss.array3("Xander Half");
+            // arrayss.ShowArray4("Lenin", "Amangandi");
+            // arrayss.array5Lenin();
 
-            loading.loading1();
-            loading.loading2('*');
-            loading.loading3('=');
-            loading.loading4();
-            loading.loading5();
-            loading.loading7();
-            loading.loading8("LeninAmangandi");
-            loading.loading10("Programacion II POO");
-            loading.loading11(50);
-            loading.loading11D();
+            // loading.loading1();
+            // loading.loading2('*');
+            // loading.loading3('=');
+            // loading.loading4();
+            // loading.loading5();
+            // loading.loading7();
+            // loading.loading8("LeninAmangandi");
+            // loading.loading10("Programacion II POO");
+            // loading.loading11(50);
+            // loading.loading11D();
 
-            // loading.generarBarrasDeSonido(15, 7);
+            // // loading.generarBarrasDeSonido(15, 7);
 
+            // System.out.println("El factorial correspontiente es: " +
+            // recursion.factorial(5));
+            // System.out.println("La multiplicacion correspontiente es: " +
+            // recursion.multiplicacion(15, 4));
+            // System.out.println("La suma correspontiente es: " + recursion.suma(15, 4));
 
-            System.out.println("El factorial correspontiente es: "+recursion.factorial(5));
-            System.out.println("La multiplicacion correspontiente es: "+recursion.multiplicacion(15,4));
-            System.out.println("La suma correspontiente es: "+recursion.suma(15, 4));
-
-            oneOportunit one = new oneOportunit();
-
-            // System.out.println("La prueba correspontiente es: "+one.factorial(5));
-            // one.factorial(5);
-            // System.out.println("La prueba correspontiente es: "+one.multiplicacion(15,
-            // 4));
-            // System.out.println("La prueba correspontiente es: "+one.suma(15, 4));
-            // one.multiplicacion(5, 4);
             // lDance.mostrarBarraProgreso();
             // lDance.mostrarBarraProgreso2222();
             // lDance.mostrarBarraDesplazamiento();
